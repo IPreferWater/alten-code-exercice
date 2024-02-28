@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "be539b5a-f5f4-4161-9be2-b91322384e48",
+		"name": "alten",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32994966"
+	},
+	"item": [
+		{
+			"name": "save product with all fields",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"P001\",\r\n  \"name\": \"Sample Product\",\r\n  \"description\": \"Sample description\",\r\n  \"price\": 29.99,\r\n  \"quantity\": 100,\r\n  \"inventoryStatus\": \"IN_STOCK\",\r\n  \"category\": \"Electronics\",\r\n  \"image\": \"sample_image_url\",\r\n  \"rating\": 4\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save product without optional fields",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"P002\",\r\n  \"name\": \"Second Sample Product\",\r\n  \"description\": \"Second Sample description\",\r\n  \"price\": 39.99,\r\n  \"quantity\": 101,\r\n  \"inventoryStatus\": \"IN_STOCK\",\r\n  \"category\": \"Electronics\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"P002\",\r\n  \"name\": \"Second Sample Product\",\r\n  \"description\": \"Second Sample description\",\r\n  \"price\": 39.99,\r\n  \"quantity\": 101,\r\n  \"inventoryStatus\": \"IN_STOCK\",\r\n  \"category\": \"Electronics\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"P002\",\r\n  \"name\": \"Second Sample Product\",\r\n  \"description\": \"Second Sample description\",\r\n  \"price\": 39.99,\r\n  \"quantity\": 101,\r\n  \"inventoryStatus\": \"IN_STOCK\",\r\n  \"category\": \"Electronics\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch product by id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"P002\",\r\n  \"name\": \"Second Sample Product\",\r\n  \"description\": \"Second Sample description\",\r\n  \"price\": 39.99,\r\n  \"quantity\": 101,\r\n  \"inventoryStatus\": \"IN_STOCK\",\r\n  \"category\": \"Electronics\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"P002\",\r\n  \"name\": \"Second Sample Product\",\r\n  \"description\": \"Second Sample description\",\r\n  \"price\": 39.99,\r\n  \"quantity\": 101,\r\n  \"inventoryStatus\": \"IN_STOCK\",\r\n  \"category\": \"Electronics\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
